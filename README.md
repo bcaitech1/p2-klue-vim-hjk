@@ -73,11 +73,12 @@ with open('./dataset/label_type.pkl', 'rb') as f:
 ### Install Requirements
 - `pip install -r requirements.txt`
 
-### Training
-- `SM_CHANNEL_TRAIN=[train image dir] SM_MODEL_DIR=[model saving dir] python train.py`
+### training
+* python train.py
 
-### Inference
-- `SM_CHANNEL_EVAL=[eval image dir] SM_CHANNEL_MODEL=[model saved dir] SM_OUTPUT_DATA_DIR=[inference output dir] python inference.py`
+### inference
+* python inference.py --model_dir=[model_path]
+* ex) python inference.py --model_dir=./results/checkpoint-500
 
-### Evaluation
-- `SM_GROUND_TRUTH_DIR=[GT dir] SM_OUTPUT_DATA_DIR=[inference output dir] python evaluation.py`
+### evaluation
+* python eval_acc.py
