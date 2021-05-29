@@ -1,4 +1,4 @@
-# Pstage 1 ] Image Classification
+# Pstage 2 ] KLUE
 
 ## 📋 Table of content
 
