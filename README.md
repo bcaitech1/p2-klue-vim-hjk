@@ -60,7 +60,7 @@ with open('./dataset/label_type.pkl', 'rb') as f:
 <br></br>
 ## 📝 문제 정의 및 해결 방법 <a name = 'Solution'></a>
 - 해당 대회에 대한 문제를 어떻게 정의하고, 어떻게 풀어갔는지, 최종적으로는 어떤 솔루션을 사용하였는지에 대해서는 각자의 wrap up report에서 기술하고 있습니다. 
-    - [wrapup report](https://vimhjk.oopy.io/d5f7f6d2-0a5c-442a-bfcf-4694c88b5c5d)    
+    - [wrapup report](https://vimhjk.oopy.io/23f2b1d8-b4ae-4baf-a5f2-7a57b6e416b4)    
 
 - 위 report에는 대회를 참가한 후, 개인의 회고도 포함되어있습니다. 
 
