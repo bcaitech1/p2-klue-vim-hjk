@@ -1,0 +1,215 @@
+base:
+  model_arc: "Bert"
+  tokenizer_arc: False
+  model_name: "bert-base-multilingual-cased"
+  seed: 1611  
+  train_only: False
+  train_args:
+    num_epochs: 25
+    train_batch_size: 16
+    eval_batch_size: 16
+    lr: 0.00005
+    weight_decay: 0.01
+    warmup_steps: 500
+    output_dir: './results/base'
+    save_steps: 500
+    save_total_limit: 3
+    logging_steps: 100
+    logging_dir: './logs/base'
+    evaluation_strategy: 'steps'
+    eval_steps: 500
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.2
+
+
+electra-base-v3:
+  model_arc: "Electra"
+  tokenizer_arc: False
+  model_name: "monologg/koelectra-base-v3-discriminator"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 30
+    train_batch_size: 32
+    eval_batch_size: 32
+    lr: 0.00005
+    weight_decay: 0.01
+    warmup_steps: 500
+    max_grad_norm: 1.0
+    output_dir: './results/koelectra-base-v3-discriminator'
+    save_steps: 500
+    save_total_limit: 3
+    logging_steps: 100
+    logging_dir: './logs/koelectra-base-v3-discriminator'
+    evaluation_strategy: 'steps'
+    eval_steps: 500
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.2
+    
+electra-base-v3-1:
+  model_arc: "Electra"
+  tokenizer_arc: False
+  model_name: "monologg/koelectra-base-v3-discriminator"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 25
+    train_batch_size: 16
+    eval_batch_size: 32
+    lr: 0.00005
+    weight_decay: 0.01
+    warmup_steps: 500
+    max_grad_norm: 1.0
+    output_dir: './results/electra-base-v3-1'
+    save_steps: 500
+    save_total_limit: 3
+    logging_steps: 100
+    logging_dir: './logs/electra-base-v3-1'
+    evaluation_strategy: 'steps'
+    eval_steps: 500
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.2
+
+electra-base-v3-2:
+  model_arc: "Electra"
+  tokenizer_arc: False
+  model_name: "monologg/koelectra-base-v3-discriminator"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 30
+    train_batch_size: 64
+    eval_batch_size: 64
+    lr: 0.00004
+    weight_decay: 0.00
+    warmup_steps: 300
+    max_grad_norm: 1.0
+    output_dir: './results/electra-base-v3-2'
+    save_steps: 100
+    save_total_limit: 3
+    logging_steps: 100
+    logging_dir: './logs/electra-base-v3-2'
+    evaluation_strategy: 'steps'
+    eval_steps: 100
+    label_smoothing_factor: 0.1
+  val_args:
+    use_kfold: True
+    num_k: 5
+    test_size: 0.0
+
+electra-base-v3-3:
+  model_arc: "Electra"
+  tokenizer_arc: False
+  model_name: "monologg/koelectra-base-v3-discriminator"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 30
+    train_batch_size: 32
+    eval_batch_size: 64
+    lr: 0.00001
+    weight_decay: 0.01
+    warmup_steps: 300
+    max_grad_norm: 1.0
+    output_dir: './results/electra-base-v3-2'
+    save_steps: 100
+    save_total_limit: 3
+    logging_steps: 100
+    logging_dir: './logs/electra-base-v3-2'
+    evaluation_strategy: 'steps'
+    eval_steps: 100
+    label_smoothing_factor: 0.5
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.2
+
+kobert:
+  model_arc: "Bert"
+  tokenizer_arc: False
+  model_name: "monologg/kobert"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 19
+    train_batch_size: 16
+    eval_batch_size: 64
+    lr: 0.00005
+    weight_decay: 0.0
+    warmup_steps: 500
+    max_grad_norm: 1.0
+    output_dir: './results/kobert'
+    save_steps: 450
+    save_total_limit: 3
+    logging_steps: 150
+    logging_dir: './logs/kobert'
+    evaluation_strategy: 'epoch'
+    eval_steps: 450
+    label_smoothing_factor: 0.1
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.2
+
+xlm-roberta-large:
+  model_arc: "Roberta"
+  tokenizer_arc: False
+  model_name: "xlm-roberta-large"
+  seed: 1050
+  train_only: False
+  train_args:
+    num_epochs: 22
+    train_batch_size: 64
+    eval_batch_size: 64
+    lr: 0.00004
+    weight_decay: 0.00
+    warmup_steps: 300
+    max_grad_norm: 1.0
+    output_dir: './results/xlm-roberta-large'
+    save_steps: 100
+    save_total_limit: 1
+    logging_steps: 100
+    logging_dir: './logs/xlm-roberta-large'
+    evaluation_strategy: 'steps'
+    eval_steps: 100
+    label_smoothing_factor: 0.1
+  val_args:
+    use_kfold: False
+    num_k: 0
+    test_size: 0.1
+
+
+xlm-roberta-large-2:
+  model_arc: "Roberta"
+  tokenizer_arc: False
+  model_name: "xlm-roberta-large"
+  seed: 77
+  train_only: False
+  train_args:
+    num_epochs: 30
+    train_batch_size: 64
+    eval_batch_size: 64
+    lr: 0.00005
+    weight_decay: 0.0
+    warmup_steps: 500
+    max_grad_norm: 1.0
+    output_dir: './results/xlm-roberta-large'
+    save_steps: 450
+    save_total_limit: 1
+    logging_steps: 150
+    logging_dir: './logs/xlm-roberta-large'
+    evaluation_strategy: 'epoch'
+    eval_steps: 450
+    label_smoothing_factor: 0.1
+  val_args:
+    use_kfold: True
+    num_k: 5
+    test_size: 0.0
+    
+
