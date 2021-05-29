@@ -74,11 +74,11 @@ with open('./dataset/label_type.pkl', 'rb') as f:
 - `pip install -r requirements.txt`
 
 ### training
-* python train.py
+* `python train.py`
 
 ### inference
-* python inference.py --model_dir=[model_path]
-* ex) python inference.py --model_dir=./results/checkpoint-500
+* `python inference.py --model_dir=[model_path]`
+* ex) `python inference.py --model_dir=./results/checkpoint-500`
 
 ### evaluation
-* python eval_acc.py
+* `python eval_acc.py`
